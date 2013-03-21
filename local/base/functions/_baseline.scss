@@ -1,0 +1,6 @@
+// @function baseline($n, $size: $baseline)
+// This function takes 1 param and is called like so: line-height: baseline(1);
+// It will return the $n times the default $baseline value, located in components/grid/default-grid.scss
+@function baseline($n, $size: $spacing-normal) {
+	@return $n * $size;
+}

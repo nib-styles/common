@@ -1,0 +1,33 @@
+@function bg-url($path) {
+  @return url("assets/bg/#{$path}");
+}
+
+@function asset-url($path) {
+  @return url("assets/#{$path}");
+}
+
+$component-path: '../components' !default;
+$component-name: false;
+
+$local-path: '../local' !default;
+$local: false;
+
+@function component-path($name, $path) {
+  @if $local == true {
+    @return "#{$local-path}/#{$name}/#{$path}";
+  }
+  @else {
+    @return "#{$component-path}/#{$name}/#{$path}";    
+  }
+}
+
+@function component-url($name, $path) {
+  @return url(component-path($name, $path));
+}
+
+@function relative-url($path) {
+  @if $component-name == false {
+    @warn "$component-name must be set";
+  }
+  @return component-url($component-name, $path);
+}

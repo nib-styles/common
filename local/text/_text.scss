@@ -1,0 +1,75 @@
+// These are inline text styles that we can reuse.
+// Try to avoid giving these semantic names so that
+// we can use them anywhere.
+
+// Bold blue style
+.text-1 {
+  color: $light-blue;
+  font-weight: bold;
+}
+
+// Lighter text style
+.text-2 {
+  color: #888;
+}
+
+// Style used for prices
+.text-price {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+// Style used for prices
+.text-price-small {
+  font-size: 20px;
+}
+
+// Smaller text
+.text-medium {
+  font-size: 13px;
+  line-height: 18px;
+}
+
+// Smaller text
+.text-small {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+// Smaller text
+.text-tiny {
+  font-size: 11px;
+  line-height: 15px;
+}
+
+// Larger text
+.text-large {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.text--grey {
+  color: $light-grey;
+}
+
+.text--white {
+  color: #fff;
+}
+
+.text--inset {
+  text-shadow: 0 -1px 1px rgba(black, 0.4);
+}
+
+// Bloxkquotes
+.bq {
+  margin: 0;
+
+  > p,
+  .cite {
+    display: inline;
+  }
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}

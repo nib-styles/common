@@ -1,0 +1,72 @@
+// Title groups have titles and sub-titles. They style
+// these titles use the title classes and provide the correct
+// spacing. Create these when a group of titles is used more 
+// than once.
+// 
+// .title--inverse - Title modifier
+// 
+// Styleguide 2.4.0
+
+// Large title + smaller, caps title 
+.title-group-1 {
+  .title {
+    @extend .title-3;
+    display: block;
+    line-height: baseline(1);
+    &.title--inverse {
+      @extend .title--inverse;
+    }
+  }
+  .sub-title {
+    @include truncate-text;
+    @extend .title-4;
+    @extend .title--caps;
+    display: block;
+    font-weight: normal;
+    line-height: baseline(1);
+  }
+}
+
+// title-group-2 has its own default styling. 
+// However, Use the modifier .is-extras
+// on the wrapping div to apply a different border-color
+//
+// .is-extras - Title Group modifier
+// 
+// Styleguide 2.4.1
+
+.title-group-2 {
+  @include clear-floats;
+  border-bottom: 2px solid $blue;
+  &.is-extras {
+    border-color: $extras-color;
+  }
+  .title {
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: baseline(1);
+  }
+  .sub-title {
+    font-size: 12px;
+  }
+}
+
+// title-group-3 default styling.
+//
+// .title-group-3 - Title Group
+// 
+// Styleguide 2.4.2
+
+.title-group-3 {
+  .title {
+    color: #fff;
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: baseline(1);
+  }
+  .sub-title {
+    font-size: 12px;
+  }
+}

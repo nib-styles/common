@@ -1,0 +1,159 @@
+.nav {
+  list-style:none;
+
+  li {
+    display:inline;
+  }
+  
+  a {
+    display:inline-block;
+  }
+}
+
+.nav-sticky {
+  width: 940px;
+  margin-left: -470px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 10;
+  &.is-fixed {
+    position: fixed;
+  }
+}
+
+.nav-1 {
+
+}
+
+.nav-2 {
+  box-shadow: 0 2px 20px rgba(#000, 0.35);
+  display:block;
+
+  .nav__item {
+    @include border-box;
+    display: block;
+    float: left;
+    position: relative;
+    &:first-child {
+      border-left: 0;
+      a {
+        border-radius: 0 0 0 5px;
+      }
+    }
+    &:last-child {
+      a {
+        border-radius: 0 0 5px 0;
+      }
+    }
+  }
+
+  a {
+    @include improve-text-rendering;
+    @include vertical-gradient(#f9f9f9, #ddd, #f9f9f9);
+    border-bottom: 1px solid #fff;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #ddd;
+    color: $grey;
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: baseline(2);
+    padding: 0 10px;
+    text-align: center;
+    text-decoration: none;
+    &:hover {
+      @include vertical-gradient(#fff, #ddd, #f9f9f9);
+      color: $dark-grey;
+    }
+    &.is-selected {
+      @include vertical-gradient(#fff, #ddd, #f9f9f9);
+      color: $dark-green;
+      position: relative;
+      &:after,
+      &:before {
+        @include show-pseudo-element;
+        @include triangle('bottom', 20px, 10px, #ddd);
+        bottom: -10px;
+        left: 50%;
+        margin-left: -10px;
+        position: absolute;
+      }
+      &:before {
+        @include triangle('bottom', 22px, 11px, #fff);
+        bottom: -12px;
+        margin-left: -11px;
+      }
+      .no-cssgradients &:after {
+        display: none;
+      }
+
+      // ie10
+      .no-pointerevents &:after {
+        @include triangle('bottom', 20px, 10px, #fafafa);
+        bottom: -9px;
+      }
+    }
+  }
+}
+
+.nav-3 {
+
+  &.nav--muted {
+    a {
+      color: $light-grey;
+      &:hover {
+        color: #fff;
+      }
+    }
+    li {
+      border-right-color: $grey;
+    }
+  }
+
+  li {
+    float: left;
+    display: inline;
+    border-right: 1px solid $border-color;
+  }
+
+  li:last-child {
+    border-right: none;
+  }
+
+  a {
+    padding: 0 $spacing-small;
+    color: #666;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #1F7C07;
+    text-decoration: underline;
+  }
+}
+
+.nav-secondary {
+  @extend .nav;
+  @extend .list-inline;
+
+  li {
+    border-left: 1px solid $border-color;
+    line-height: 20px;
+  }
+
+  li:first-child {
+    border-left: none;
+  }
+
+  a {
+    text-decoration: none;
+    padding: 0 $spacing-small;
+    color: $grey;
+    font-size: 12px;
+  }
+
+  a:hover {
+    color: $light-grey;
+  }
+}

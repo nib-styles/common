@@ -1,0 +1,28 @@
+/* New Range page */
+.banner-1 {
+  @include clear-floats;
+  @include retina-background-image(component-path("nib-styles-common", 'local/banner/images/paul-new-range'), 'jpg', auto, 378px);
+  background-repeat: no-repeat;
+  background-position: spacing(2) 100%;
+  padding: spacing(5) spacing(2) spacing(9);
+  text-align: center;
+
+  .banner__title {
+    @extend .title-6;
+    font-size: size(10);
+    line-height: 60px;
+    margin-bottom: spacing(2);
+    font-weight: 200;
+    color: #444;
+  }
+
+  .banner__body {
+    @extend .text-large;
+    width: 650px;
+    float: right;
+  }
+
+  .banner__content {
+    margin-bottom: spacing(2);
+  }
+}

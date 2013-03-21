@@ -1,0 +1,22 @@
+// Basic block list with copy styles for the list item content. The list item extends the %copy class.
+// 
+// .block-list--small - Smaller text variant
+// 
+// Styleguide 6.4.1
+.block-list-1 {
+  &.block-list--small {
+    @extend .copy--note;
+    .block-list__item {
+      padding: spacing(1.5);
+    }
+  }
+  .block-list__item {
+    @extend %copy;
+    background: #fff;
+    border: 1px solid $border-color;
+    padding: spacing(2);
+  }
+  .block-list__item + .block-list__item {
+    border-top: 0;
+  }
+}

@@ -1,0 +1,194 @@
+@function tabs-image-url($path) {
+  @return component-url('nib-styles-common', "local/tabs/images/#{$path}");
+}
+
+$tab-radius: 10px;
+
+.tabs {
+  @include clear-floats;
+  margin-bottom: -1px;
+  position: relative;
+  z-index: 1;
+
+  &.tabs--four {
+    .tabs__tab {
+      width: 25%;
+    }
+  }
+
+  &.tabs--two {
+    .tabs__tab {
+      width: 50%;
+    }
+  }
+  
+  .tabs__tab {
+    float: left;
+    width: 25%;
+
+    &.tab--extras.is-selected {
+      a,
+      a:hover {
+        background: $extras-color;
+      }
+      &:after {
+        @include triangle('bottom', 20px, 10px, $extras-color);
+      }
+    }
+
+    &:first-child {
+      a {
+        margin-left: 0;
+      }
+    }
+
+    // &:last-child {
+    //   float: none;
+    //   overflow: hidden;
+    //   width: auto;
+    // }
+
+    &.is-selected {
+      position: relative;
+      z-index: 1000;
+      
+      a,
+      a:hover {
+        background: $light-blue;
+      }
+
+      &:after {
+        @include show-pseudo-element;
+        @include triangle('bottom', 20px, 10px, $light-blue);
+        position: absolute;
+        left: 50%;
+        margin-left: -10px;
+        bottom: -9px;
+      }
+    }
+
+    a {
+      @include vertical-gradient(#666, #3e3e3e);
+      @include improve-text-rendering;
+      
+      border-radius: $tab-radius $tab-radius 0 0;
+      padding: baseline(0.85) $spacing-normal baseline(0.75) $spacing-normal;
+      display: block;
+      text-decoration: none;
+      margin-left: 1px;
+      outline: none;
+      position: relative;
+      outline: none;
+
+      &:hover {
+        color: #fff;
+        background: #777;
+        cursor: pointer;
+      }
+    }
+
+    &.is-loading {
+      a:after {
+        @include show-pseudo-element;
+        height: 20px;
+        width: 20px;
+        background: tabs-image-url('loader.gif') no-repeat;
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        z-index: 1000;
+      }
+    }
+  }
+}
+
+.tabs-2 {
+  @include clear-floats;
+  border-bottom: 1px solid $border-color;
+  position: relative;
+  margin: 0 -30px;
+  padding: 0 30px;
+  z-index: 1;
+
+  .tabs__tab {
+    float: left;
+    margin-left: 5px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    a {
+      @include improve-text-rendering;
+      background: $lighter-grey;
+      border-radius: 6px 6px 0 0;
+      border: 1px solid $border-color;
+      border-bottom: none;
+      color: $light-grey;
+      display: block;
+      font-size: 13px;
+      font-weight: bold;
+      line-height: baseline(2);
+      outline: none;
+      padding: 0 $spacing-normal;
+      text-decoration: none;
+      outline: none;
+    }
+
+    a:hover {
+      background: lighten($lighter-grey, 2);
+      cursor: pointer;
+    }
+
+    i {
+      position: relative;
+      top: 3px;
+      margin-left: 3px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+
+    i + span {
+      margin-left: 6px;
+    }
+
+    &.is-selected {
+      position: relative;
+      z-index: 1000;
+
+      a {
+        background: #fff;
+        color: $dark-grey;
+        padding-bottom: 1px;
+        margin-bottom: -1px;
+      }
+    }
+  }
+
+  .tabs__info {
+    display: block;
+    float: right;
+    line-height: baseline(0.8);
+    width: 20%;
+
+    a {
+      color: $dark-green;
+      font-size: 12px;
+      font-weight: bold;
+      position: relative;
+
+      &:hover {
+        color: $light-green;
+      }
+
+      &:after {
+        content: ">";
+        left: -15px;
+        position: absolute;
+        top: 0;
+      }
+    }
+  }
+}

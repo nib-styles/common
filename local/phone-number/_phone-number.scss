@@ -1,0 +1,36 @@
+@function phone-number-image-url($path) {
+  @return component-url('nib-styles-common', "local/phone-number/#{$path}");
+}
+
+.phone-number {
+  font-size: 24px;
+  line-height: baseline(0.7);
+  padding-left: 25px;
+  background: phone-number-image-url("green.png") no-repeat 0px 0px;
+  color: $dark-green;
+
+  span {
+    font-weight: 600;
+    line-height: baseline(1);
+  }
+
+  & > a {
+    color: $light-green;
+    display: block;
+    font-size: size(1);
+    font-weight: bold;
+    padding-left: 5px;
+  }
+
+  &.phone-number--white {
+    background: phone-number-image-url("white.png") no-repeat 0px 0px;
+    color: #fff;
+    a {
+      color: #fff;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

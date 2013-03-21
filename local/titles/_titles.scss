@@ -1,0 +1,117 @@
+// Various title styles are applied via classes so it doesn't
+// matter which element you use
+// 
+// .title-4 - Title
+// .title-5 - Title
+// .title-7 - Title
+// .title-2 - Title 
+// .title-3 - Title
+// .title-1 - Title
+// .title-6 - Title 
+// .title-7 - Title
+// .title-8 - Title
+// .title-9 - Title
+// .title-10 - Title
+// 
+// Styleguide 2.1.0
+
+.title-1 {
+  font-size: 24px;
+  line-height: baseline(1.5);
+  color: $dark-grey;
+}
+
+.title-2 {
+  font-size: 16px;
+  color: #666;
+  font-weight: bold;
+}
+
+.title-3 {
+  font-size: 20px;
+  line-height: baseline(1.5);
+  font-weight: bold;
+  color: $dark-grey;
+}
+
+.title-4 {
+  font-size: 10.5px;
+}
+
+.title-5 {
+  color: $grey;
+  font-weight: bold;
+}
+
+.title-6 {
+  @include improve-text-rendering;
+  font-size: 36px;
+  font-weight: 300;
+  line-height: baseline(2);
+}
+
+.title-7 {
+  font-size: 14px;
+  font-weight: bold;
+  color: $dark-grey;
+}
+
+.title-8 {
+  font-size: 20px;
+  color: $grey;
+  font-weight: 400;
+}
+
+.title-9 {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.title-10 {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+// Modifiers
+// -------------------------------------------------------
+
+// Title modifiers, to be used in conjunction with a .title-* class
+// 
+// .title--caps - Title Modifier
+// .title--small - Title Modifier
+// .title--inverse - Title Modifier
+// 
+// Styleguide 2.1.1
+
+.title--grey {
+  color: $grey;
+}
+
+.title--dark-grey {
+  color: $dark-grey;
+}
+
+.title--white {
+  color: #fff;
+}
+
+.title--yellow {
+  color: #f9b831;
+}
+
+.title--caps {
+  text-transform: uppercase;
+}
+
+.title--small {
+  font-size: 11px;
+  line-height: 14px;
+}
+
+.title--inverse {
+  a,
+  a:hover,
+  & {
+    color: #fff;
+  }
+}

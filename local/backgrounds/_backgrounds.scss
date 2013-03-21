@@ -1,0 +1,7 @@
+%green-gradient {
+  @include vertical-gradient(#5BB602, #007500, #007500);
+}
+
+%radial-green-gradient {
+  @include radial-gradient(#5BB602, #007500, center bottom, 60%);
+}

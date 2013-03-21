@@ -1,0 +1,67 @@
+// List with green arrows
+.list-1 {
+  margin: 0;
+  li {
+    list-style: none;
+    padding-left: 18px;
+    background: component-url('nib-styles-common', 'local/lists/images/icon-arrow-right.png') no-repeat 0 5px;
+    margin-bottom: baseline(0.5);
+  }
+  strong {
+    color: #333;
+  }
+
+  a {
+    color: $dark-grey;
+    text-decoration: none;
+    &:hover {
+      color: $dark-green;
+    }
+  }
+
+  &.is-extras {
+    & > li {
+      background-image: component-url('nib-styles-common', 'local/lists/images/icon-arrow-right-extras.png');      
+    }
+  }
+  &.is-hospital {
+    & > li {
+      background-image: component-url('nib-styles-common', 'local/lists/images/icon-arrow-right-hospital.png');      
+    }
+  }
+  
+  &.with-hover {
+    li {
+      background-image: component-url('nib-styles-common', 'local/lists/images/icon-arrow-right-grey.png');
+      &:hover {
+        background-image: component-url('nib-styles-common', 'local/lists/images/icon-arrow-right.png');
+      }
+    }
+  }
+
+  ul {
+    margin: spacing(1) 0;
+    & > li {
+      list-style: disc;
+      list-style-position: inside;
+      background: none;    
+      padding-left: 0;  
+      margin-bottom: baseline(0.25)
+    }
+  }
+}
+
+// List with a title and a list of links
+.list-2 {
+  li {
+    margin: baseline(0.25) 0;
+    line-height: 15px;
+  }
+  a {
+    color: #fff;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

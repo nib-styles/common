@@ -1,0 +1,75 @@
+// Anchor styles are applied via classes
+// 
+// .anchor-1 - Link
+// .anchor-2 - Link
+// .anchor-3 - link
+// 
+// Styleguide 2.3.0
+
+.anchor {
+	font-weight: normal;
+	text-decoration: none;
+}
+
+.anchor-1 {
+	@extend .anchor;
+	&, &:active {
+		color: $dark-green;
+		text-decoration: underline;
+	}
+	&:hover {
+		color: lighten($dark-green, 10%);
+	}
+}
+
+.anchor-2 {
+	@extend .anchor;
+	&, &:active {
+		color: #888;
+	}
+	&:hover {
+		color: #333;
+	}
+}
+
+.anchor-3 {
+	@extend .anchor;
+	text-decoration: none;
+	
+	&, &:active {
+		color: $dark-grey;
+	}
+	&:hover {
+		color: $dark-green;
+	}
+}
+
+.anchor-4 {
+	@extend .anchor;
+	&, &:hover {
+		color: #fff;
+	}
+}
+
+.anchor-5 {
+	@extend .anchor;
+	&, &:active {
+		color: $dark-green;
+		text-decoration: none;
+	}
+	&:hover {
+		color: lighten($dark-green, 10%);
+	}
+}
+
+.anchor-6 {
+	@extend .anchor;
+	text-decoration: underline;
+	
+	&, &:active {
+		color: $dark-grey;
+	}
+	&:hover {
+		color: $dark-green;
+	}
+}

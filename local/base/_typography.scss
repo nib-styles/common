@@ -1,0 +1,14 @@
+// Typography
+$type-baseline              : 20px;
+$type-font-family           : "Helvetica Neue", Helvetica, Arial, sans-serif;
+$type-font-size             : 14px;
+$type-weight                : 400;
+
+$type-sizes: 12px 14px 16px 20px 24px 27px 30px 33px 36px 54px;
+
+// @function text-size($n)
+// This function takes 1 param and is called like so: font-size: text-size(4);
+// It will return the 4th value in the $type-sizes list located in settings/type.scss
+@function size($n) {
+  @return nth($type-sizes,$n);
+}

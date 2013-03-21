@@ -1,0 +1,129 @@
+// Define styles for blocks of content scoped within the .copy rather than
+// making them global. Global styles will be constantly overridden.
+// Add a class of .copy to a div and the contents will render as a block of copy text
+
+%copy {
+
+  &.copy--inverse {
+    color: #fff;
+    a {
+      color: #fff;
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+
+  p,
+  ul,
+  ol {
+    margin:0 0 baseline(0.75) 0;
+    
+    &:last-child {
+      margin-bottom:0;
+    }
+  }
+
+   *:first-child {
+    margin-top:0;
+  }
+
+  a {
+    &, &:active {
+      text-decoration: underline;
+      color: $dark-green;
+    }
+    &:hover {
+      color: $dark-green;
+    }
+  }
+
+  ul {
+    padding-left: $spacing-small;
+    margin-left: $spacing-small;
+    li {
+      margin-bottom: 3px;
+      list-style-position:outside;
+    }
+  }
+
+  ol {
+
+    li {
+      list-style-type:decimal;
+      list-style-position:inside;
+      margin-bottom: spacing(1);
+    }
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  li {
+    display:list-item;
+  }
+
+  h1,h2,h3,h4,h5,h6 {
+
+  }
+
+  h1 {
+    @extend .title-6;
+    margin-bottom: spacing(2);
+  }
+
+  h2 {
+    @extend .title-1;
+    margin-bottom: spacing(2);
+    margin-top: spacing(3);
+  }
+
+  h3 {
+    @extend .title-3;
+    margin-bottom: spacing(2);
+  }
+
+  h4 {
+    @extend .title-2;
+    margin-bottom: spacing(2);
+  }
+
+  h5 {
+    @extend .title-7;
+    margin-bottom: spacing(2);
+  }
+
+  h6 {
+
+  }
+
+  em {
+    font-style:italic;
+  }
+
+  strong {
+    font-weight:bold;
+  }
+}
+
+.copy {
+  @extend %copy;
+}
+
+.copy--note {
+  color: #666;
+  font-size: 12px;
+  line-height: 17px;
+  
+  p,
+  ul,
+  ol {
+    margin-bottom:10px;
+  }
+
+  a {
+    @extend .anchor-1;
+  }
+}
+

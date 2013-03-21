@@ -1,0 +1,162 @@
+.table-list {
+	border: 0;
+	background: #fff;
+	margin: 0;
+
+	&.table--extras {
+		th {
+			background: $extras-color;
+			font-size: 12px;
+			padding: 0 $spacing-small;
+			height: baseline(2);
+
+			&.name {
+				width: 600px;
+			}
+			&.waiting-period {
+				text-align: center;
+			}
+			&.limit {
+				text-align: center;
+				width: 50px;
+			}
+		}
+		td {
+			border: 1px solid $border-color;
+			border-width: 0 0 1px 0;
+		}
+		tbody {
+			border: 1px solid $border-color;
+			border-top: none;
+		}
+	}
+	
+	th,
+	td {
+		padding: $spacing-small;
+	}
+	
+	th {
+		@include improve-text-rendering;
+		background: $dark-green;
+		color: #fff;
+		border: 0;
+		line-height: 1;
+
+		&.is-important {
+			font-size:16px;
+		}
+	}
+
+	td {
+		font-size: 12px;
+		border: 1px solid $border-color;
+	}
+
+
+	td + td {
+		width: 100px
+	}
+
+	a {
+		color: $dark-green;
+		&:hover {
+			color: $dark-grey;
+		}
+	}
+}
+
+.table-1 {
+	td, th {
+		border: 3px solid white;
+	}
+	tbody td,
+	tbody th {
+		font-size: 15px;
+		font-weight: normal;
+	}
+}
+
+// Table Style
+// 
+// .table--small - Smaller type
+// 
+// Styleguide 4.3.1
+.table-2 {
+	font-size: inherit;
+	background: white;
+	width: 100%;
+	color: $light-grey;
+	text-align: left;
+	margin: 0;
+
+	&.table--small {
+		font-size: 12px;
+		line-height: 15px;
+	}
+
+	thead,
+	tbody {
+		border: 1px solid $border-color;
+	}
+	thead th {
+		background: $lighter-grey;
+		color: $grey;
+		font-weight: bold;
+		text-shadow: 0 1px 0 rgba(#fff, 1);
+	}
+	tbody th {
+		color: $dark-grey;
+	}
+	td,
+	th {
+		font-weight: normal;
+		border-bottom: 1px solid $border-color;
+		padding: $spacing-small - 2px;
+	}
+}
+
+.cell-square {
+	height: 83px;
+	width: 83px;
+}
+
+.cell-1 {
+	background: $light-green;
+	font-weight: bold;
+	color: #fff;
+	line-height: baseline(2);
+	padding: 0 spacing(1);
+}
+
+.cell-2 {
+	background: $dark-green;
+	font-size: 12px;
+	font-weight: normal;
+	color: white;
+	line-height: baseline(2);
+	padding: 0 spacing(1);
+}
+
+.cell-3 {
+	background: $dark-grey;
+	color: #fff;
+	line-height: baseline(4);
+	font-size: 16px;
+}
+
+.cell-4 {
+	background: $lighter-grey;
+	font-size: 16px;
+}
+
+.cell-5 {
+	background: desaturate(lighten($light-green, 30%), 30%);
+	text-align: center;
+}
+
+.cell-6 {
+	background: $lighter-grey;
+	font-size: 12px;
+	font-weight: normal;
+}
