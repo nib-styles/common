@@ -46,9 +46,9 @@
     "local/lists/images/icon-arrow-right.jpg",
     "local/panels/images/icon-panel-back.jpg",
     "local/panels/images/jigsaw.jpg",
-    "local/phone-number/images/green.jpg",
-    "local/phone-number/images/grey.jpg",
-    "local/phone-number/images/white.jpg",
+    "local/phone-number/green.jpg",
+    "local/phone-number/grey.jpg",
+    "local/phone-number/white.jpg",
     "local/tabs/images/loader.gif"
   ]
 }
