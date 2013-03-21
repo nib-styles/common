@@ -38,17 +38,17 @@
   "files": [
     "local/banner/images/paul-new-range.jpg",
     "local/banner/images/paul-new-range@2x.jpg",
-    "local/blocks/images/bg-grey-stripes.jpg",
-    "local/buttons/images/btn-secondary.jpg",
-    "local/lists/images/icon-arrow-right-extras.jpg",
-    "local/lists/images/icon-arrow-right-grey.jpg",
-    "local/lists/images/icon-arrow-right-hospital.jpg",
-    "local/lists/images/icon-arrow-right.jpg",
-    "local/panels/images/icon-panel-back.jpg",
+    "local/blocks/images/bg-grey-stripes.png",
+    "local/buttons/images/btn-secondary.png",
+    "local/lists/images/icon-arrow-right-extras.png",
+    "local/lists/images/icon-arrow-right-grey.png",
+    "local/lists/images/icon-arrow-right-hospital.png",
+    "local/lists/images/icon-arrow-right.png",
+    "local/panels/images/icon-panel-back.png",
     "local/panels/images/jigsaw.jpg",
-    "local/phone-number/green.jpg",
-    "local/phone-number/grey.jpg",
-    "local/phone-number/white.jpg",
+    "local/phone-number/green.png",
+    "local/phone-number/grey.png",
+    "local/phone-number/white.png",
     "local/tabs/images/loader.gif"
   ]
 }
