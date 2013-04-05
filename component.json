@@ -2,7 +2,7 @@
   "name": "common",
   "descriptions": "Common styles used across all sites.",
   "main": "index.scss",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "dependencies": {},
   "styles": [
     "index.scss",
@@ -50,6 +50,10 @@
     "local/phone-number/green.png",
     "local/phone-number/grey.png",
     "local/phone-number/white.png",
-    "local/tabs/images/loader.gif"
+    "local/tabs/images/loader.gif",
+    "local/phone-number/green.svg",
+    "local/phone-number/grey.svg",
+    "local/phone-number/white.svg",
+    "local/blocks/images/transparent-grey-stripes.png"
   ]
 }

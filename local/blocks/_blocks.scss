@@ -80,6 +80,22 @@
   box-shadow: 0 -4px 10px rgba(black,0.2);
 }
 
+
+.block-8 {
+  @include vertical-gradient(#444, #333);
+}
+
+.block-9 {
+  // @include radial-gradient(#7c7c7c, #5c5c5c, center top, 60%);
+
+  background-color: rgb(92, 92, 92);
+  background-image: 
+    component-url('nib-styles-common', 'local/blocks/images/transparent-grey-stripes.png'),
+    -webkit-radial-gradient(center top, rgba(124, 124, 124, 0.7) 0, rgb(95, 95, 95) 60%); 
+
+  border-top: 1px solid #999;
+}
+
 // Modifiers
 // ---------------------------------------------------
 

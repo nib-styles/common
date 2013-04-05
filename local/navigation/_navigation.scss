@@ -30,7 +30,7 @@
   box-shadow: 0 2px 20px rgba(#000, 0.35);
   display:block;
 
-  .nav__item {
+  & > .nav__item {
     @include border-box;
     display: block;
     float: left;
@@ -48,7 +48,7 @@
     }
   }
 
-  a {
+  & > .nav__item > a {
     @include improve-text-rendering;
     @include vertical-gradient(#f9f9f9, #ddd, #f9f9f9);
     border-bottom: 1px solid #fff;
@@ -95,7 +95,67 @@
       }
     }
   }
+
+  .nav__item--parent > a {
+    position: relative;
+    z-index: 2;
+
+    @include after {
+      @include show-pseudo-element;
+      @include transform(translateY(-50%));
+      top: 50%;
+      position: absolute;
+      right: 15px;
+      height: 16px;
+      width: 16px;
+      opacity: 0.8;
+      background: component-url('nib-styles-accordion', 'down.png') no-repeat top right;
+      background: component-url('nib-styles-accordion', 'down.svg') no-repeat top right, none;
+      background-size: 16px 16px;
+    }
+
+    // Pre-load the other image so we don't get a flash
+    @include before {
+      background: component-url('nib-styles-accordion', 'up.svg') no-repeat top right;
+      height: 0;
+      width: 0;
+      position: absolute;
+    }
+
+    &.is-open:after {
+      background-image: component-url('nib-styles-accordion', 'up.png');
+      background-image: component-url('nib-styles-accordion', 'up.svg'), none;
+    }
+    &:hover {
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+
+  &.nav--vertical {
+    & > .nav__item {
+      float: none;
+      &:last-child > a {
+        border-bottom: 0;
+      }
+    }
+    & > .nav__item > a {
+      border-radius: 0;
+      text-align: left;
+      padding: 0 20px;
+      border-bottom: 1px solid #bbb;
+      border-left: 0;
+    }
+    & > .nav__sub {
+      position: relative;
+      z-index: 1;
+    }
+  }
+
 }
+
+
 
 .nav-3 {
 
@@ -155,5 +215,54 @@
 
   a:hover {
     color: $light-grey;
+  }
+}
+
+
+.nav-4 {
+  border-top: 1px solid #666;
+
+  // When this nav is a sub-menu
+  &.nav--sub {
+    border-top: 0;
+    .nav__item:first-child a {
+      box-shadow: 0 4px 5px rgba(black, 0.25) inset;
+    }
+    & > .nav__item > a {
+      padding-left: 30px;
+    }
+  }
+
+  &.nav--muted {
+    a {
+      text-transform: uppercase;
+      font-size: 10px;
+      opacity: 0.5;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  .nav__item {
+    @include border-box;
+    display: block;
+    position: relative;
+  }
+
+  a {
+    @include improve-text-rendering;
+    border-bottom: 1px solid #666;
+    background: #444;
+    color: white;
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: baseline(2);
+    padding: 0 20px;
+    text-decoration: none;
+    &:hover {
+      background: #555;
+    }
   }
 }
