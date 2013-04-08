@@ -1,16 +1,24 @@
 /* Set base type styles */
 body {
-	font-family: $type-font-family;
-	font-size: $type-font-size;
+  font-family: $type-font-family;
+  font-size: $type-font-size;
   font-weight: normal;
-	line-height: $type-baseline;
-	vertical-align: baseline;
+  line-height: $type-baseline;
+  vertical-align: baseline;
   color: #555;
   position: relative;
   background: #444;
 
   .touch & {
     min-width: 100vw;
+  }
+
+  @media (max-width:250px) {
+    background: #fff;
+    & > header,
+    & > footer {
+      display: none;
+    }
   }
 }
 
