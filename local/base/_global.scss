@@ -8,18 +8,6 @@ body {
   color: #555;
   position: relative;
   background: #444;
-
-  .touch & {
-    min-width: 100vw;
-  }
-
-  @media (max-width:250px) {
-    background: #fff;
-    & > header,
-    & > footer {
-      display: none;
-    }
-  }
 }
 
 * {
