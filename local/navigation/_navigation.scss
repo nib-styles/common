@@ -167,24 +167,27 @@
       }
     }
     li {
-      border-right-color: $grey;
+      border-left-color: $grey;
     }
   }
 
   li {
     float: left;
     display: inline;
-    border-right: 1px solid $border-color;
+    border-left: 1px solid $border-color;
   }
 
-  li:last-child {
-    border-right: none;
+  li:first-child {
+    border-left: none;
   }
 
   a {
     padding: 0 $spacing-small;
     color: #666;
     text-decoration: none;
+    @media (max-width: 320px) {
+      padding: 0 5px;
+    }
   }
 
   a:hover {
