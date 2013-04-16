@@ -37,21 +37,18 @@
     position: relative;
     &:first-child {
       border-left: 0;
-      a,
-      span {
+      a {
         border-radius: 0 0 0 5px;
       }
     }
     &:last-child {
-      a,
-      span {
+      a {
         border-radius: 0 0 5px 0;
       }
     }
   }
 
-  & > .nav__item > a,
-  & > .nav__item > span {
+  & > .nav__item > a {
     @include improve-text-rendering;
     @include vertical-gradient(#f9f9f9, #ddd, #f9f9f9);
     border-bottom: 1px solid #fff;
@@ -65,7 +62,6 @@
     padding: 0 10px;
     text-align: center;
     text-decoration: none;
-    cursor: pointer;
     &:hover {
       @include vertical-gradient(#fff, #ddd, #f9f9f9);
       color: $dark-grey;
@@ -100,8 +96,7 @@
     }
   }
 
-  .nav__item--parent > a,
-  .nav__item--parent > span {
+  .nav__item--parent > a {
     position: relative;
     z-index: 2;
 
@@ -141,13 +136,11 @@
   &.nav--vertical {
     & > .nav__item {
       float: none;
-      &:last-child > a,
-      &:last-child > span {
+      &:last-child > a {
         border-bottom: 0;
       }
     }
-    & > .nav__item > a,
-    & > .nav__item > span {
+    & > .nav__item > a {
       border-radius: 0;
       text-align: left;
       padding: 0 20px;

@@ -2,7 +2,7 @@
   "name": "common",
   "descriptions": "Common styles used across all sites.",
   "main": "index.scss",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "dependencies": {},
   "styles": [
     "index.scss",
