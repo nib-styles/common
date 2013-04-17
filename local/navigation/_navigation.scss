@@ -11,16 +11,20 @@
 }
 
 .nav-sticky {
-  left: 50%;
-  max-width: 940px;
   position: absolute;
   top: 0;
   width: 100%;
   z-index: 10;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  transform: translateX(-50%);
+  zoom: 1;
 
+  &.nav-2 {
+    box-shadow: none;
+  }
+
+  .nav {
+    box-shadow: 0 2px 20px rgba(#000, 0.35);
+  }
+  
   &.is-fixed {
     position: fixed;
   }
