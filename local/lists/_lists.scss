@@ -65,3 +65,24 @@
     }
   }
 }
+
+.list-ticks {
+  margin: 0;
+  li {
+    list-style: none;
+    padding-left: 25px;
+    background-image: component-url('nib-styles-common', 'local/lists/images/tick.png');
+    background-image: component-url('nib-styles-common', 'local/lists/images/tick.svg'), none;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 16px 15px;
+    margin-bottom: baseline(0.5);
+  }
+  strong {
+    color: #333;
+  }
+}
+
+.list--tight {
+  line-height: 1.1;
+}
