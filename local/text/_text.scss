@@ -63,7 +63,6 @@
 // Bloxkquotes
 .bq {
   margin: 0;
-
   > p,
   .cite {
     display: inline;
@@ -72,4 +71,8 @@
 
 .text-uppercase {
   text-transform: uppercase;
+}
+
+.anti-alias {
+  @include improve-text-rendering;
 }
