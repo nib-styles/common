@@ -15,12 +15,11 @@
     background: #fff;
     border: 1px solid $border-color;
     padding: spacing(2);
+    &.block-list__item--flush {
+      border-bottom: 0;
+    }
   }
   .block-list__item + .block-list__item {
     border-top: 0;
   }
-}
-
-.block-list__item--flush {
-  border-bottom: 0;
 }

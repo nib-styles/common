@@ -54,6 +54,8 @@
     "local/phone-number/green.svg",
     "local/phone-number/grey.svg",
     "local/phone-number/white.svg",
-    "local/blocks/images/transparent-grey-stripes.png"
+    "local/blocks/images/transparent-grey-stripes.png",
+    "local/lists/images/tick.png",
+    "local/lists/images/tick.svg"
   ]
 }
