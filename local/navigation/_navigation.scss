@@ -11,26 +11,49 @@
 }
 
 .nav-sticky {
-  width: 940px;
-  margin-left: -470px;
   position: absolute;
   top: 0;
-  left: 50%;
+  width: 100%;
   z-index: 10;
+  zoom: 1;
+
+  &.nav-2 {
+    box-shadow: none;
+  }
+
+  .nav {
+    box-shadow: 0 2px 20px rgba(#000, 0.35);
+  }
+  
   &.is-fixed {
     position: fixed;
   }
+
+  @media (max-width: 870px) {
+    a {
+      font-size: 11px !important;
+    }
+  }
+
+  @media (max-width: 800px) {
+    &, &.is-fixed {
+      position: relative !important;
+    }
+
+    a {
+      font-size: 12px !important;
+    }
+  }
 }
 
-.nav-1 {
-
-}
+.nav-1 {}
 
 .nav-2 {
   box-shadow: 0 2px 20px rgba(#000, 0.35);
   display:block;
 
-  & > .nav__item {
+  & > .nav__item,
+  &.nav-sticky .nav__item {
     @include border-box;
     display: block;
     float: left;
@@ -51,7 +74,8 @@
   }
 
   & > .nav__item > a,
-  & > .nav__item > span {
+  & > .nav__item > span,
+  &.nav-sticky .nav__item a {
     @include improve-text-rendering;
     @include vertical-gradient(#f9f9f9, #ddd, #f9f9f9);
     border-bottom: 1px solid #fff;
@@ -99,6 +123,19 @@
       }
     }
   }
+
+  @media (max-width: 800px) {
+    &.nav-sticky .nav__item:first-child a,
+    &.nav-sticky .nav__item:last-child a {
+      border-radius: 0 !important;
+    }
+
+    &.nav-sticky .nav__item .is-selected:before,
+    &.nav-sticky .nav__item .is-selected:after {
+      display: none !important;
+    }
+  }
+
 
   .nav__item--parent > a,
   .nav__item--parent > span {

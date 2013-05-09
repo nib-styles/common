@@ -2,7 +2,7 @@
   "name": "common",
   "descriptions": "Common styles used across all sites.",
   "main": "index.scss",
-  "version": "0.1.3",
+  "version": "0.2.0",
   "dependencies": {},
   "styles": [
     "index.scss",
@@ -34,7 +34,7 @@
     "local/tabs/_tabs.scss",
     "local/text/_text.scss",
     "local/titles/_title-groups.scss",
-    "local/titles/_titles.scss"
+    "local/titles/_titles.scss" 
   ],
   "files": [
     "local/banner/images/paul-new-range.jpg",
@@ -54,6 +54,8 @@
     "local/phone-number/green.svg",
     "local/phone-number/grey.svg",
     "local/phone-number/white.svg",
-    "local/blocks/images/transparent-grey-stripes.png"
+    "local/blocks/images/transparent-grey-stripes.png",
+    "local/lists/images/tick.png",
+    "local/lists/images/tick.svg"
   ]
 }
