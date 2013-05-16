@@ -2,10 +2,11 @@
 .list-1 {
   margin: 0;
   li {
-    list-style: none;
-    padding-left: 18px;
+    background-position: 0 8px;
     background: component-url('nib-styles-common', 'local/lists/images/icon-arrow-right.png') no-repeat 0 50%;
+    list-style: none;
     margin-bottom: baseline(0.5);
+    padding-left: 18px;
   }
   strong {
     color: #333;
