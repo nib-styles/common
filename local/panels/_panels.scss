@@ -93,14 +93,14 @@
   border: 0;
 }
 
-// Center align the text in a panel 
+// Center align the text in a panel
 // @section 3.0
 // @modifier
 .panel--center {
   text-align: center;
 }
 
-// Right align the text in a panel 
+// Right align the text in a panel
 // @section 3.0
 // @modifier
 .panel--right {
@@ -148,4 +148,9 @@
 
 .panel--inset {
   box-shadow: 0 0 4px rgba(#000, 0.5) inset;
+}
+
+// Thicker top border
+.panel--top-heavy {
+  border-top-width: 5px;
 }

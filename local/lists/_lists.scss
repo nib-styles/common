@@ -90,3 +90,15 @@
 .list--tight {
   line-height: 1.1;
 }
+
+.list-inline-bullets {
+  li {
+    display: inline-block;
+    &:after {
+      content: " \2022 ";
+    }
+    &:last-child:after {
+      display: none;
+    }
+  }
+}

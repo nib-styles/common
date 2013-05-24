@@ -1,7 +1,7 @@
 // The button classes are best applied to links, buttons, and submit inputs.
 // These components can be used in forms, as calls to action, or as part of the
 // general UI of the site/app.
-// 
+//
 // .btn--primary - Main call to action
 // .btn--secondary - Secondary call to action and for generic buttons
 // .btn--inverse - Inverse style button for reverse backgrounds or negative actions
@@ -16,8 +16,8 @@
 // .btn--full - Full-width button. This is usually used in smaller columns where it makes sense to have the button span the full width of the column.
 // .btn--shadow - Adds a drop-shadow to the button. Used on dark backgrounds
 // .btn--info - Button used to show more information. Used with JS components to show and hide content.
-// .btn--bordered - Bordered buttons. Used to make a button more important without increasing it's size or colour 
-// 
+// .btn--bordered - Bordered buttons. Used to make a button more important without increasing it's size or colour
+//
 // Styleguide 1.1
 
 @function button-image-url($path) {
@@ -34,7 +34,7 @@
   @include vertical-gradient($highlight, $primary, $primary);
 
   // Corrects inability to style clickable `input` types in iOS
-  -webkit-appearance: none; 
+  -webkit-appearance: none;
 
   border-radius: 3px;
   border: 1px solid $shadow;
@@ -194,7 +194,7 @@
   $highlight: lighten($grey, 15%);
 
   @extend .btn--primary;
-  @include vertical-gradient($highlight, $grey, $grey); 
+  @include vertical-gradient($highlight, $grey, $grey);
 
   color: white;
   border: 1px solid $shadow;
@@ -284,7 +284,7 @@
 // Button with only an icon and no text. Use buttons as normal but
 // wrap the button text in a span and add an icon inside. Placing
 // the icon before or after the text will determine it's position
-// 
+//
 // Styleguide 1.2.0
 .btn--icon {
   padding-left: $spacing-small;
@@ -339,4 +339,28 @@
 
 .btn--bordered-light {
   box-shadow: 0 1px 0 rgba(#fff, 0.5) inset, 0 1px 0 rgba(#000, 0.1), 0 0 0 5px rgba(#fff, 0.1);
+}
+
+// Button with a grey border and text
+// that appears on the left
+.btn-label {
+  padding: 5px;
+  background: darken($lighter-grey, 3%);
+  border-radius: 5px;
+  overflow: hidden;
+  float: right;
+  .btn-label__text {
+    @extend .title-8;
+    @extend .anti-alias;
+    font-size: 16px;
+    line-height: 40px;
+    color: $grey;
+    padding: 0 20px;
+    &:empty {
+      display: none;
+    }
+  }
+  .btn-label__button {
+    float: right;
+  }
 }
