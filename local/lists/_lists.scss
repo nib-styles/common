@@ -28,6 +28,7 @@
       background-image: component-url('nib-styles-common', 'local/lists/images/icon-arrow-right-extras.png');
     }
   }
+
   &.is-hospital {
     & > li {
       background-image: component-url('nib-styles-common', 'local/lists/images/icon-arrow-right-hospital.png');
@@ -40,6 +41,24 @@
       &:hover {
         background-image: component-url('nib-styles-common', 'local/lists/images/icon-arrow-right.png');
       }
+    }
+  }
+
+  &.list-1--white {
+    li {
+      background-image: component-url('nib-styles-common', 'local/lists/images/icon-arrow-right-white.png');
+    }
+  }
+
+  &.list-1--grey {
+    li {
+      background-image: component-url('nib-styles-common', 'local/lists/images/icon-arrow-right-grey.png');
+    }
+  }
+
+  &.list-1--middle {
+    li {
+      background-position: 0 50%;
     }
   }
 
