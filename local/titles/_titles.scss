@@ -1,18 +1,18 @@
 // Various title styles are applied via classes so it doesn't
 // matter which element you use
-// 
+//
 // .title-4 - Title
 // .title-5 - Title
 // .title-7 - Title
-// .title-2 - Title 
+// .title-2 - Title
 // .title-3 - Title
 // .title-1 - Title
-// .title-6 - Title 
+// .title-6 - Title
 // .title-7 - Title
 // .title-8 - Title
 // .title-9 - Title
 // .title-10 - Title
-// 
+//
 // Styleguide 2.1.0
 
 .title-1 {
@@ -82,11 +82,11 @@
 // -------------------------------------------------------
 
 // Title modifiers, to be used in conjunction with a .title-* class
-// 
+//
 // .title--caps - Title Modifier
 // .title--small - Title Modifier
 // .title--inverse - Title Modifier
-// 
+//
 // Styleguide 2.1.1
 
 .title--grey {
@@ -103,6 +103,10 @@
 
 .title--yellow {
   color: #f9b831;
+}
+
+.title--green {
+  color: $dark-green;
 }
 
 .title--caps {
