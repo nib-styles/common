@@ -11,16 +11,9 @@
       background-position: 0 8px;
     }
   }
+
   strong {
     color: #333;
-  }
-
-  a {
-    color: $dark-grey;
-    text-decoration: none;
-    &:hover {
-      color: $dark-green;
-    }
   }
 
   &.is-extras {
