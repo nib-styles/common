@@ -100,7 +100,9 @@
 }
 
 .list--tight {
-  line-height: 1.1;
+  li {
+    margin-bottom: 5px;
+  }
 }
 
 .list-inline-bullets {
