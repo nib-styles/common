@@ -1,7 +1,7 @@
 /* New Range page */
 .banner-1 {
   @include clear-floats;
-  @include retina-background-image(component-path("nib-styles-common", 'local/banner/images/paul-new-range'), 'jpg', auto, 378px);
+  @include retina-background-image('local/banner/images/paul-new-range', 'jpg', auto, 378px);
   background-repeat: no-repeat;
   background-position: spacing(2) 100%;
   padding: spacing(5) spacing(2) spacing(9);

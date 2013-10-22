@@ -4,7 +4,7 @@
   li {
     display:inline;
   }
-  
+
   a {
     display:inline-block;
   }
@@ -16,7 +16,7 @@
   width: 100%;
   z-index: 10;
   zoom: 1;
-  
+
   &.is-fixed {
     position: fixed;
   }
@@ -140,22 +140,22 @@
       height: 16px;
       width: 16px;
       opacity: 0.8;
-      background: component-url('nib-styles-accordion', 'down.png') no-repeat top right;
-      background: component-url('nib-styles-accordion', 'down.svg') no-repeat top right, none;
+      background: url('local/navigation/images/down.png') no-repeat top right;
+      background: url('local/navigation/images/down.svg') no-repeat top right, none;
       background-size: 16px 16px;
     }
 
     // Pre-load the other image so we don't get a flash
     @include before {
-      background: component-url('nib-styles-accordion', 'up.svg') no-repeat top right;
+      background: url('local/navigation/images/up.svg') no-repeat top right;
       height: 0;
       width: 0;
       position: absolute;
     }
 
     &.is-open:after {
-      background-image: component-url('nib-styles-accordion', 'up.png');
-      background-image: component-url('nib-styles-accordion', 'up.svg'), none;
+      background-image: url('local/navigation/images/up.png');
+      background-image: url('local/navigation/images/up.svg'), none;
     }
     &:hover {
       &::after {

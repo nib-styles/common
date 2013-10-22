@@ -1,5 +1,5 @@
 @function phone-number-image-url($path) {
-  @return component-url('nib-styles-common', "local/phone-number/#{$path}");
+  @return url("local/phone-number/#{$path}");
 }
 
 .phone-number {

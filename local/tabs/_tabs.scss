@@ -1,5 +1,5 @@
 @function tabs-image-url($path) {
-  @return component-url('nib-styles-common', "local/tabs/images/#{$path}");
+  @return url("local/tabs/images/#{$path}");
 }
 
 $tab-radius: 10px;
@@ -21,7 +21,7 @@ $tab-radius: 10px;
       width: 50%;
     }
   }
-  
+
   .tabs__tab {
     float: left;
     width: 25%;
@@ -51,7 +51,7 @@ $tab-radius: 10px;
     &.is-selected {
       position: relative;
       z-index: 1000;
-      
+
       a,
       a:hover {
         background: $light-blue;
@@ -70,7 +70,7 @@ $tab-radius: 10px;
     a {
       @include vertical-gradient(#666, #3e3e3e);
       @include improve-text-rendering;
-      
+
       border-radius: $tab-radius $tab-radius 0 0;
       padding: baseline(0.85) $spacing-normal baseline(0.75) $spacing-normal;
       display: block;

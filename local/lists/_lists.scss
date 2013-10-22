@@ -2,7 +2,7 @@
 .list-1 {
   margin: 0;
   li {
-    background: component-url('nib-styles-common', 'local/lists/images/icon-arrow-right.png') no-repeat 0 8px;
+    background: url('local/lists/images/icon-arrow-right.png') no-repeat 0 8px;
     list-style: none;
     margin-bottom: baseline(0.5);
     padding-left: 18px;
@@ -18,34 +18,34 @@
 
   &.is-extras {
     & > li {
-      background-image: component-url('nib-styles-common', 'local/lists/images/icon-arrow-right-extras.png');
+      background-image: url('local/lists/images/icon-arrow-right-extras.png');
     }
   }
 
   &.is-hospital {
     & > li {
-      background-image: component-url('nib-styles-common', 'local/lists/images/icon-arrow-right-hospital.png');
+      background-image: url('local/lists/images/icon-arrow-right-hospital.png');
     }
   }
 
   &.with-hover {
     li {
-      background-image: component-url('nib-styles-common', 'local/lists/images/icon-arrow-right-grey.png');
+      background-image: url('local/lists/images/icon-arrow-right-grey.png');
       &:hover {
-        background-image: component-url('nib-styles-common', 'local/lists/images/icon-arrow-right.png');
+        background-image: url('local/lists/images/icon-arrow-right.png');
       }
     }
   }
 
   &.list-1--white {
     li {
-      background-image: component-url('nib-styles-common', 'local/lists/images/icon-arrow-right-white.png');
+      background-image: url('local/lists/images/icon-arrow-right-white.png');
     }
   }
 
   &.list-1--grey {
     li {
-      background-image: component-url('nib-styles-common', 'local/lists/images/icon-arrow-right-grey.png');
+      background-image: url('local/lists/images/icon-arrow-right-grey.png');
     }
   }
 
@@ -87,8 +87,8 @@
   li {
     list-style: none;
     padding-left: 25px;
-    background-image: component-url('nib-styles-common', 'local/lists/images/tick.png');
-    background-image: component-url('nib-styles-common', 'local/lists/images/tick.svg'), none;
+    background-image: url('local/lists/images/tick.png');
+    background-image: url('local/lists/images/tick.svg'), none;
     background-repeat: no-repeat;
     background-position: 0 0;
     background-size: 16px 15px;

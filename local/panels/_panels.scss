@@ -1,5 +1,5 @@
 @function panels-image-url($path) {
-  @return component-url('nib-styles-common', "local/panels/images/#{$path}");
+  @return url("local/panels/images/#{$path}");
 }
 
 // Basic box style.
