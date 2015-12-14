@@ -1,9 +1,9 @@
 {
   "name": "common",
   "descriptions": "Common styles used across all sites.",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "development": {
-    "nib-styles/colors": "*",
+    "nib-styles/colors": "0.1.2",
     "nib-styles/spacing": "*",
     "nib-styles/mixins": "*"
   },
